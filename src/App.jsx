@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import './App.css';
 import searchIcon from './assets/search.jpg';
 import clear from './assets/clear.webp';
@@ -254,6 +254,10 @@ const App = () => {
             search();
         }
     }
+
+    useEffect(()=>{
+        search();
+    }, [])
   return (
         <div className="frame">
             <img src={img} id='img'/>
